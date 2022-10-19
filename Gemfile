@@ -66,3 +66,9 @@ end
 
 
 gem "dotenv-rails", "~> 2.8"
+
+gem "capistrano", "~> 3.17"
+gem "capistrano-rails", "~> 1.6"
+gem "capistrano-passenger", "~> 0.2.1"
+gem "capistrano-rbenv", "~> 2.2"
+gem "capistrano-bundler", "~> 2.1"
