@@ -6,7 +6,7 @@ set :branch,      'main'
 
 set :deploy_to, '/home/deploy/apps/sem7-agile'
 
-append :linked_files, '.env'
+append :linked_files, '.env', 'config/master.key'
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads'
 
 set :rbenv_prefix, '/usr/bin/rbenv exec'
