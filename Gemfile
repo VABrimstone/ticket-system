@@ -74,3 +74,5 @@ gem "capistrano-rbenv", "~> 2.2"
 gem "capistrano-bundler", "~> 2.1"
 
 gem "devise", "~> 4.8"
+
+gem "devise-i18n", "~> 1.10"

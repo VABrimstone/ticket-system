@@ -99,6 +99,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-i18n (1.10.2)
+      devise (>= 4.8.0)
     dotenv (2.8.1)
     dotenv-rails (2.8.1)
       dotenv (= 2.8.1)
@@ -225,6 +227,7 @@ DEPENDENCIES
   capistrano-rbenv (~> 2.2)
   debug
   devise (~> 4.8)
+  devise-i18n (~> 1.10)
   dotenv-rails (~> 2.8)
   importmap-rails
   jbuilder
