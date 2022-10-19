@@ -1,8 +1,9 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.17.1"
+lock '~> 3.17.1'
 
-set :application, "sem7-agile"
-set :repo_url, "https://github.com/VABrimstone/ticket-system"
+set :application, 'sem7-agile'
+set :repo_url,    'https://github.com/VABrimstone/ticket-system'
+set :branch,      'main'
 
 set :deploy_to, '/home/deploy/apps/sem7-agile'
 
