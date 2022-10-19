@@ -1,0 +1,11 @@
+form.new_user .field {
+  margin-bottom: 1rem;
+}
+
+form.new_user label {
+  font-size: 0.75rem;
+}
+
+form.new_user .actions input {
+  padding: 0.25rem 0.5rem;
+}

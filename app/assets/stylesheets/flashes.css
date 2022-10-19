@@ -1,0 +1,11 @@
+.flash {
+  padding: 1rem;
+}
+
+.flash-alert {
+  background-color: pink;
+}
+
+.flash-notice {
+  background-color: lightgreen;
+}
