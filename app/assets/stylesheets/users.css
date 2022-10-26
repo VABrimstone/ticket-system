@@ -1,0 +1,22 @@
+.user {
+  display: flex;
+  padding: 1rem;
+  margin-top: 1rem;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1)
+}
+
+.user__name {
+  width: 25%;
+}
+
+.user__email {
+  width: 25%;
+}
+
+.user__role {
+  width: 25%;
+}
+
+.user__status {
+  width: 25%;
+}

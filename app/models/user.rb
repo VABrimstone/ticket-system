@@ -4,15 +4,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable
         #  :recoverable, :rememberable, :validatable
 
+  enum :role,   { regular: 0, admin: 1 }
+  enum :status, { active: 0, inactive: 1 }
+
   validates :email,
     presence:   true,
     uniqueness: true
 
-  def name_or_email
-    if name.nil? || name.empty?
-      email
-    else
-      name
-    end
-  end
+  scope :ordered, -> { order(id: :desc) }
 end

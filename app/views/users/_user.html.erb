@@ -1,0 +1,17 @@
+<div class="user">
+  <div class="user__name">
+    <%= user.name %>
+  </div>
+
+  <div class="user__email">
+    <%= link_to user.email, "mailto:#{user.email}" %>
+  </div>
+
+  <div class="user__role">
+    <%= role_for_display(user) %>
+  </div>
+
+  <div class="user__status">
+    <%= status_for_display(user) %>
+  </div>
+</div>

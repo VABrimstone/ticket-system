@@ -6,7 +6,7 @@
     <ul>
     <% if user_signed_in? %>
       <li class='email'>
-        <%= link_to current_user.name_or_email,
+        <%= link_to name_or_email(current_user),
           edit_user_registration_path
         %>
       </li>
