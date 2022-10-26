@@ -11,14 +11,14 @@
         %>
       </li>
       <li>
-        <%= button_to 'Выйти', destroy_user_session_path, method: :delete, data: { turbo: false } %>
+        <%= button_to 'Выйти', destroy_user_session_path, method: :delete, data: { turbo: false }, class: 'btn'%>
       </li>
     <% else %>
       <li>
-        <%= link_to 'Войти', new_session_path(:user) %>
+        <%= link_to 'Войти', new_session_path(:user), class: 'btn' %>
       </li>
       <li>
-        <%= link_to 'Регистрация', new_registration_path(:user) %>
+        <%= link_to 'Регистрация', new_registration_path(:user), class: 'btn' %>
       </li>
     <% end %>
     </ul>
