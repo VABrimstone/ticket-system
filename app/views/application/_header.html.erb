@@ -5,6 +5,11 @@
   <nav>
     <ul>
     <% if user_signed_in? %>
+      <li class='email'>
+        <%= link_to current_user.name_or_email,
+          edit_user_registration_path
+        %>
+      </li>
       <li>
         <%= button_to 'Выйти', destroy_user_session_path, method: :delete, data: { turbo: false } %>
       </li>

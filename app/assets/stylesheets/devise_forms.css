@@ -1,11 +1,14 @@
-form.new_user .field {
+form.new_user .field,
+form.edit_user .field {
   margin-bottom: 1rem;
 }
 
-form.new_user label {
+form.new_user label,
+form.edit_user label {
   font-size: 0.75rem;
 }
 
-form.new_user .actions input {
+form.new_user .actions input,
+form.edit_user .actions input {
   padding: 0.25rem 0.5rem;
 }

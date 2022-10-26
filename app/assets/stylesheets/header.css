@@ -18,13 +18,7 @@ header  a,
 header button {
   border:     none;
   background: none;
-  font-weight:     bold;
   text-decoration: none;
   color: black;
   cursor: pointer;
-}
-
-header nav a,
-header nav button {
-  text-transform:  uppercase;
 }

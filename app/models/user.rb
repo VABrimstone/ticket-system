@@ -7,4 +7,12 @@ class User < ApplicationRecord
   validates :email,
     presence:   true,
     uniqueness: true
+
+  def name_or_email
+    if name.nil? || name.empty?
+      email
+    else
+      name
+    end
+  end
 end
