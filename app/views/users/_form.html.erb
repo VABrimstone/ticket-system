@@ -1,19 +1,19 @@
-<div class="user">
+<%= form_with model: user, class: "user" do |form| %>
   <div class="user__fields">
     <div class="user__email">
       <%= link_to user.email, "mailto:#{user.email}" %>
     </div>
 
     <div class="user__role">
-      <%= role_for_display(user.role) %>
+      <%= form.select :role, roles_hash %>
     </div>
 
     <div class="user__status">
-      <%= status_for_display(user.status) %>
+      <%= form.select :status, statuses_hash %>
     </div>
   </div>
 
   <div class="user__button">
-    <%= link_to 'Редактировать', edit_user_path(user), class: 'btn btn--primary' %>
+    <%= form.submit 'Сохранить', class: 'btn btn--primary' %>
   </div>
-</div>
+<% end %>
