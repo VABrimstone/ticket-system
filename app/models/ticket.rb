@@ -1,6 +1,6 @@
 class Ticket < ApplicationRecord
   belongs_to :user
-  belongs_to :department
+  belongs_to :department, optional: true
 
   validates :title,
     presence: true

@@ -25,7 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_28_154031) do
     t.string "title", null: false
     t.text "message", null: false
     t.bigint "user_id", null: false
-    t.bigint "department_id", null: false
+    t.bigint "department_id"
     t.integer "status", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

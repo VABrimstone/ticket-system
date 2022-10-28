@@ -4,7 +4,7 @@ class CreateTickets < ActiveRecord::Migration[7.0]
       t.string :title, null: false
       t.text :message, null: false
       t.references :user, null: false, foreign_key: true
-      t.references :department, null: false, foreign_key: true
+      t.references :department, null: true, foreign_key: true
       t.integer :status, null: false, default: 0
 
       t.timestamps
