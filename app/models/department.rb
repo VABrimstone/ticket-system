@@ -5,5 +5,5 @@ class Department < ApplicationRecord
     presence:   true,
     uniqueness: true
 
-  scope :ordered_alphabetically, ->{ order(:title, :asc) }
+  scope :ordered_alphabetically, ->{ order(title: :asc) }
 end
