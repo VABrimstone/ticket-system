@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[edit update]
-  before_action :authorize_admin
+  before_action :authorize_user
 
   def index
     @users = User.ordered
@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def authorize_admin
+  def authorize_user
     user = @user || User
     authorize user
   end
