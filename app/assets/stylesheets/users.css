@@ -10,20 +10,23 @@
 .user__fields {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   flex-grow: 1;
 }
+
+.user__fields > * {
+  padding-left:  1rem;
+  padding-right: 1rem;
+}
+
 .user__email {
-  width: 25%;
+  width: 33.3%;
 }
 
 .user__role {
-  width: 25%;
+  width: 33.3%;
 }
 
 .user__status {
-  width: 25%;
-}
-
-.user__button button {
-  padding: 0.25rem 0.5rem;
+  width: 33.3%;
 }
