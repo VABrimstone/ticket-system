@@ -5,4 +5,6 @@ Rails.application.routes.draw do
     registrations: 'registrations'
   }
   resources :users, only: %i[index edit update]
+
+  resources :departments, only: %i[index new create edit update]
 end

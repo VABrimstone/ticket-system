@@ -1,0 +1,27 @@
+.department {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1rem;
+  margin-top: 1rem;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1)
+}
+
+.department__fields {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.department__fields > * {
+  padding-left:  1rem;
+  padding-right: 1rem;
+}
+
+.department__title {
+  width: 75%;
+}
+
+.department__status {
+  width: 25%;
+}

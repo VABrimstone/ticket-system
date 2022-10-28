@@ -1,0 +1,15 @@
+<%= form_with model: department, class: "department" do |form| %>
+  <div class="department__fields">
+    <div class="department__title">
+      <%= form.text_field :title %>
+    </div>
+
+    <div class="department__status">
+      <%= form.select :status, department_statuses_hash %>
+    </div>
+  </div>
+
+  <div class="department__button">
+    <%= form.submit 'Отправить', class: 'btn btn--primary' %>
+  </div>
+<% end %>
