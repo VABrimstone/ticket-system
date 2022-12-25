@@ -32,4 +32,13 @@ module UsersHelper
       [user_status_for_display(status), status]
     end
   end
+
+  def users_hash
+    {'': nil}.merge(
+      User.all
+        .to_h do |user, db_representation|
+          [user.email, user.id]
+        end
+    )
+  end
 end

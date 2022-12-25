@@ -11,5 +11,9 @@
     <div class="col-md-3"><strong>Отдел</strong></div>
     <div class="col-md-9"><%= form.select :department_id, departments_hash, {}, class: 'form-select' %></div>
   </div>
+  <div class="row mb-2">
+    <div class="col-md-3"><strong>Упомянутый пользователь</strong></div>
+    <div class="col-md-9"><%= form.select :mentioned_user_id, users_hash, {}, class: 'form-select' %></div>
+  </div>
   <%= form.submit 'Отправить', class: 'btn btn-primary' %>
 <% end %>

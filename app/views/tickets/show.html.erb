@@ -30,5 +30,9 @@
       <div class="col-md-3"><strong>Сообщение</strong></div>
       <div class="col-md-9"><%= @ticket.message %></div>
     </div>
+    <div class="row mb-2">
+      <div class="col-md-3"><strong>Упомянутый пользователь</strong></div>
+      <div class="col-md-9"><%= @ticket.mentioned_user&.name %></div>
+    </div>
   </div>
 </div>

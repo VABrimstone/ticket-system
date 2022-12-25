@@ -50,14 +50,16 @@ class TicketsController < ApplicationController
     params.require(:ticket).permit(
       :title,
       :message,
-      :department_id
+      :department_id,
+      :mentioned_user_id
     )
   end
 
   def update_ticket_params
     params.require(:ticket).permit(
       :department_id,
-      :status
+      :status,
+      :mentioned_user_id
     )
   end
 end
