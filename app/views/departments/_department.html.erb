@@ -1,18 +1,5 @@
-<div class="department">
-  <div class="department__fields">
-    <div class="department__title">
-      <%= department.title %>
-    </div>
-
-    <div class="department__status">
-      <%= department_status_for_display(department.status) %>
-    </div>
-  </div>
-
-  <div class="department__button">
-    <%= link_to 'Редактировать',
-      edit_department_path(department),
-      class: 'btn btn--primary'
-    %>
-  </div>
-</div>
+<tr>
+  <td class='align-baseline'><%= department.title %></td>
+  <td class='align-baseline'><%= department_status_for_display(department.status) %></td>
+  <td class='align-baseline'><%= link_to 'Редактировать', edit_department_path(department), class: 'btn btn-primary' %></td>
+</tr>

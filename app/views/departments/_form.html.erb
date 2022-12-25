@@ -1,15 +1,13 @@
-<%= form_with model: department, class: "department" do |form| %>
-  <div class="department__fields">
-    <div class="department__title">
-      <%= form.text_field :title %>
-    </div>
-
-    <div class="department__status">
-      <%= form.select :status, department_statuses_hash %>
-    </div>
-  </div>
-
-  <div class="department__button">
-    <%= form.submit 'Отправить', class: 'btn btn--primary' %>
-  </div>
-<% end %>
+<tr>
+  <%= form_with model: department, class: "department" do |form| %>
+    <td class='align-baseline'>
+      <%= form.text_field :title, class: 'form-control' %>
+    </td>
+    <td class='align-baseline'>
+      <%= form.select :status, department_statuses_hash, {}, class: 'form-select' %>
+    </td>
+    <td class='align-baseline'>
+      <%= form.submit 'Отправить', class: 'btn btn-primary' %>
+    </td>
+  <% end %>
+</tr>

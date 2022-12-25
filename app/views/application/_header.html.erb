@@ -1,26 +1,26 @@
-<header>
-  <h1>
-    <%= link_to 'Тикет-система', root_path%>
-  </h1>
-  <nav>
-    <ul>
-    <% if user_signed_in? %>
-      <li class='email'>
-        <%= link_to name_or_email(current_user),
-          edit_user_registration_path
-        %>
-      </li>
-      <li>
-        <%= button_to 'Выйти', destroy_user_session_path, method: :delete, data: { turbo: false }, class: 'btn'%>
-      </li>
-    <% else %>
-      <li>
-        <%= link_to 'Войти', new_session_path(:user), class: 'btn' %>
-      </li>
-      <li>
-        <%= link_to 'Регистрация', new_registration_path(:user), class: 'btn' %>
-      </li>
-    <% end %>
+<nav class='navbar navbar-expand'>
+  <div class="container-fluid">
+    <%= link_to 'Тикет-система', root_path, class: 'navbar-brand' %>
+
+    <ul class="navbar-nav">
+      <% if user_signed_in? %>
+        <li class='nav-item'>
+          <%= link_to name_or_email(current_user),
+            edit_user_registration_path,
+            class: 'nav-link'
+          %>
+        </li>
+        <li class='nav-item'>
+          <%= button_to 'Выйти', destroy_user_session_path, method: :delete, data: { turbo: false }, class: 'btn btn-outline-danger'%>
+        </li>
+      <% else %>
+        <li class='nav-item'>
+          <%= link_to 'Войти', new_session_path(:user), class: 'nav-link' %>
+        </li>
+        <li class='nav-item'>
+          <%= link_to 'Регистрация', new_registration_path(:user), class: 'nav-link' %>
+        </li>
+      <% end %>
     </ul>
-  </nav>
-</header>
+  </div>
+</nav>
