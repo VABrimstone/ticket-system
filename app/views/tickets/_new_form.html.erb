@@ -1,0 +1,15 @@
+<%= form_with model: ticket, class: 'edit_ticket' do |form| %>
+  <div class="row mb-2">
+    <div class="col-md-3"><strong>Заголовок</strong></div>
+    <div class="col-md-9"><%= form.text_field :title, class: 'form-control' %></div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-md-3"><strong>Сообщение</strong></div>
+    <div class="col-md-9"><%= form.text_area :message, class: 'form-control' %></div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-md-3"><strong>Отдел</strong></div>
+    <div class="col-md-9"><%= form.select :department_id, departments_hash, {}, class: 'form-select' %></div>
+  </div>
+  <%= form.submit 'Отправить', class: 'btn btn-primary' %>
+<% end %>

@@ -1,0 +1,23 @@
+<%= form_with model: ticket, class: 'edit_ticket' do |form| %>
+  <div class="row mb-2">
+    <div class="col-md-3"><strong>Заголовок</strong></div>
+    <div class="col-md-9"><%= @ticket.title %></div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-md-3"><strong>Статус</strong></div>
+    <div class="col-md-9"><%= form.select :status, ticket_statuses_hash, {}, class: 'form-select' %></div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-md-3"><strong>Автор</strong></div>
+    <div class="col-md-9"><%= @ticket.user.name %></div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-md-3"><strong>Отдел</strong></div>
+    <div class="col-md-9"><%= form.select :department_id, departments_hash, {}, class: 'form-select' %></div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-md-3"><strong>Сообщение</strong></div>
+    <div class="col-md-9"><%= @ticket.message %></div>
+  </div>
+  <%= form.submit 'Сохранить', class: 'btn btn-primary' %>
+<% end %>

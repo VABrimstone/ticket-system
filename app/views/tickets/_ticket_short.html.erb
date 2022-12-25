@@ -1,0 +1,13 @@
+<tr>
+  <td class='align-baseline'>
+    <% unless ticket.department.nil? %>
+      <%= ticket.department.title %>
+    <% end %>
+  </td>
+  <td class='align-baseline'>
+    <%= ticket_status_for_display(ticket.status) %>
+  </td>
+  <td class='align-baseline'>
+    <%= link_to ticket.title, ticket %>
+  </td>
+</tr>

@@ -1,4 +1,10 @@
 module DepartmentsHelper
+  def departments_hash
+    Department.active.map do |department, db_representation|
+      [department.title, department.id]
+    end
+  end
+
   def department_status_for_display(status)
     case status
     when 'active'   then 'Активен'
