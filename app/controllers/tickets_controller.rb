@@ -31,7 +31,7 @@ class TicketsController < ApplicationController
     if @ticket.update(update_ticket_params)
       redirect_to ticket_url(@ticket), notice: 'Заявка отредактирована'
     else
-      render :edit, notice: 'Не удалось отредактировать заявку'
+      render :edit, notice: 'Не удалось отредактировать заявку', status: :unprocessable_entity
     end
   end
 

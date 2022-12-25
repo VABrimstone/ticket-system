@@ -27,7 +27,7 @@ class DepartmentsController < ApplicationController
     if @department.update(department_params)
       redirect_to departments_path, notice: 'Данные об отделе обновлены'
     else
-      render :edit, notice: 'Не удалось обновить данные'
+      render :edit, notice: 'Не удалось обновить данные', status: :unprocessable_entity
     end
   end
 

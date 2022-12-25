@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to users_path
     else
-      render :edit, notice: 'Не удалось обновить данные'
+      render :edit, notice: 'Не удалось обновить данные', status: :unprocessable_entity
     end
   end
 
