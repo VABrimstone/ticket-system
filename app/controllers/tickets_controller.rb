@@ -1,5 +1,6 @@
 class TicketsController < ApplicationController
   before_action :set_ticket, only: %i[show edit update]
+  before_action :authorize_user
 
   def index
     @tickets = Ticket.all
@@ -38,6 +39,11 @@ class TicketsController < ApplicationController
 
   def set_ticket
     @ticket = Ticket.find(params[:id])
+  end
+
+  def authorize_user
+    ticket = @ticket || Ticket
+    authorize ticket
   end
 
   def create_ticket_params

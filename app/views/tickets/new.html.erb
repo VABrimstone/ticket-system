@@ -1,7 +1,9 @@
-<div class='row'>
+<div class='row mb-2'>
   <div class='col' >
     <h2 class='d-inline align-baseline'>Новая заявка</h2>
-    <%= link_to 'К заявкам', tickets_path, class: 'btn btn-light align-baseline' %>
+    <% if policy(Ticket).index? %>
+      <%= link_to 'К заявкам', tickets_path, class: 'btn btn-light align-baseline' %>
+    <% end %>
   </div>
 </div>
 
