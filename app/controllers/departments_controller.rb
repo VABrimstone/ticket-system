@@ -11,10 +11,12 @@ class DepartmentsController < ApplicationController
   end
 
   def create
-    if Department.create(department_params)
-      redirect_to department_params, notice: 'Отдел создан'
+    department = Department.new(department_params)
+
+    if department.save
+      redirect_to departments_path, notice: 'Отдел создан'
     else
-      render :new, notice: 'Не удалось создать отдел'
+      render :new, notice: 'Не удалось создать отдел', status: :unprocessable_entity
     end
   end
 
