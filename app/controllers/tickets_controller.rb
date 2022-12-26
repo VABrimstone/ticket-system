@@ -3,7 +3,7 @@ class TicketsController < ApplicationController
   before_action :authorize_user
 
   def index
-    @tickets = Ticket.all
+    @tickets = Ticket.all.order(id: :desc)
   end
 
   def show

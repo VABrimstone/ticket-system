@@ -1,4 +1,7 @@
 <tr>
+  <td><%= ticket.id %></td>
+  <td><%= ticket.user.name %></td>
+  <td><%= ticket.created_at.to_fs(:short) %></td>
   <td class='align-baseline'>
     <% unless ticket.department.nil? %>
       <%= ticket.department.title %>
