@@ -1,0 +1,9 @@
+<div class="card mb-2">
+  <div class="card-body">
+    <%= form_with model: [@ticket, @ticket.replies.build] do |form| %>
+      <span class="card-subtitle text-muted"><%= current_user.name %></span>
+      <p class="card-text"><%= form.text_area :comment, class: 'form-control' %></p>
+      <%= form.submit 'Отправить', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>

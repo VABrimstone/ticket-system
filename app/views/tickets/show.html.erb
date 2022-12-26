@@ -36,3 +36,21 @@
     </div>
   </div>
 </div>
+
+<div class="row">
+  <div class="col">
+    <h3>Комментарии</h3>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <%= render 'replies/form' %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <%= render @ticket.replies.order(created_at: :desc) %>
+  </div>
+</div>

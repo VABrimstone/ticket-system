@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   has_many :tickets,
     dependent: :nullify
+  has_many :replies,
+    dependent: :nullify
 
   enum :role,   { regular: 0, admin: 1 }
   enum :status, { active: 0, inactive: 1 }

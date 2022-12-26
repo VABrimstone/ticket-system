@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_25_225220) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_25_230941) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,6 +19,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_25_225220) do
     t.integer "status", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "replies", force: :cascade do |t|
+    t.bigint "ticket_id", null: false
+    t.bigint "user_id", null: false
+    t.string "comment", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ticket_id"], name: "index_replies_on_ticket_id"
+    t.index ["user_id"], name: "index_replies_on_user_id"
   end
 
   create_table "tickets", force: :cascade do |t|
@@ -45,6 +55,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_25_225220) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "replies", "tickets"
+  add_foreign_key "replies", "users"
   add_foreign_key "tickets", "departments"
   add_foreign_key "tickets", "users"
 end
