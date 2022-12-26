@@ -4,6 +4,10 @@ class TicketsController < ApplicationController
 
   def index
     @tickets = Ticket.all.order(id: :desc)
+
+    @tickets = Ticket.where(status: :open)     if params[:status] == 'open'
+    @tickets = Ticket.where(status: :closed)   if params[:status] == 'closed'
+    @tickets = Ticket.where(status: :resolved) if params[:status] == 'resolved'
   end
 
   def show
