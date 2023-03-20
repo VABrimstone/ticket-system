@@ -80,3 +80,5 @@ gem "devise-i18n", "~> 1.10"
 gem "pundit", "~> 2.2"
 
 gem "bootstrap", "~> 5.2"
+
+gem "faker", "~> 3.1"
