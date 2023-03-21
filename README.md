@@ -1,7 +1,8 @@
 # Запуск на локальной машине (Linux)
-1. Установить Docker и Docker Compose
-2. Установить VSCode с расширением Dev Containers
-3. В VSCode открыть папку с проектом, исполнить команду Reopen in Container
+1. Установить [Docker и Docker Compose](https://docs.docker.com/desktop/install/linux-install)
+2. Установить VSCode с расширением [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+3. В VSCode открыть папку с проектом, выполнить команду `Reopen in Container`
+
 В контейнере:
 4. `bundle exec rails db:create` — создать БД
 5. `bundle exec rails db:migrate` — прогнать миграции
