@@ -4,6 +4,17 @@
 
     <ul class="navbar-nav">
       <% if user_signed_in? %>
+        <% if current_user.admin? %>
+          <li class="nav_item">
+            <%= link_to 'Заявки', tickets_path, class: 'nav-link'%>
+          </li>
+          <li class="nav_item">
+            <%= link_to 'Отделы', departments_path, class: 'nav-link'%>
+          </li>
+          <li class="nav_item">
+            <%= link_to 'Пользователи', users_path, class: 'nav-link'%>
+          </li>
+        <% end %>
         <li class='nav-item'>
           <%= link_to name_or_email(current_user),
             edit_user_registration_path,
