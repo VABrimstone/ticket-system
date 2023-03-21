@@ -1,3 +1,26 @@
-<h2>Редактирование <%= name_or_email(@user) %></h2>
 
-<%= render 'form', user: @user %>
+
+
+
+<div class='row'>
+  <div class='col' >
+    <h2>Редактирование <%= name_or_email(@user) %></h2>
+  </div>
+</div>
+
+<div class='row'>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Почта</th>
+        <th>Роль</th>
+        <th>Статус</th>
+        <th>Действия</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render 'form', user: @user %>
+    </tbody>
+  </table>
+</div>
+

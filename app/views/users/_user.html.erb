@@ -1,19 +1,7 @@
-<div class="user">
-  <div class="user__fields">
-    <div class="user__email">
-      <%= link_to user.email, "mailto:#{user.email}" %>
-    </div>
+<tr>
+  <td class='align-baseline'><%= link_to user.email, "mailto:#{user.email}" %></td>
+  <td class='align-baseline'><%= user_role_for_display(user.role) %></td>
+  <td class='align-baseline'><%= user_status_for_display(user.status) %></td>
+  <td class='align-baseline'><%= link_to 'Редактировать', edit_user_path(user), class: 'btn btn-primary' %></td>
+</tr>
 
-    <div class="user__role">
-      <%= user_role_for_display(user.role) %>
-    </div>
-
-    <div class="user__status">
-      <%= user_status_for_display(user.status) %>
-    </div>
-  </div>
-
-  <div class="user__button">
-    <%= link_to 'Редактировать', edit_user_path(user), class: 'btn btn--primary' %>
-  </div>
-</div>
